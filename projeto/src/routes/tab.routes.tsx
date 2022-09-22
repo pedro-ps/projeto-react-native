@@ -1,11 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
 import { ScreenA } from '../screens/screenA';
 import { ScreenB } from '../screens/screenB';
+import { ScreenC } from '../screens/screenC';
 
 export function TabRoutes(){
     return(
@@ -21,11 +23,7 @@ export function TabRoutes(){
                 headerShown: false,
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialIcons 
-                        name="home"
-                        color={color}
-                        size={size}
-                    />
+                    <FontAwesome5 name="home" size={size} color={color} />
                 )
             }}
             component={ScreenA}
@@ -35,16 +33,33 @@ export function TabRoutes(){
             name="screenB"
             options={{
                 title: 'Clientes',
+                headerTitleAlign: 'center',
                 tabBarLabel: 'Clientes',
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialIcons 
+                /* headerStyle:{
+                    backgroundColor: '#90e0ef'
+                }, */
+                tabBarIcon: ({ color}) => (
+                    <MaterialIcons
                         name="people"
+                        size={30}
                         color={color}
-                        size={size}
                     />
                 )
             }}
             component={ScreenB}
+            />
+
+            <Screen
+            name="screenC"
+            options={{
+                title: 'Cadastro de clientes',
+                headerTitleAlign: 'center',
+                tabBarLabel: 'Cadastro de clientes',
+                tabBarIcon: ({ color }) => (
+                    <MaterialIcons name="person-add-alt-1" size={30} color={color} />
+                )
+            }}
+            component={ScreenC}
             />
         </Navigator>
     )
