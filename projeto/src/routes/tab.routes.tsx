@@ -5,9 +5,9 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
-import { ScreenA } from '../screens/screenA';
-import { ScreenB } from '../screens/screenB';
-import { ScreenC } from '../screens/screenC';
+import { Home} from '../screens/home';
+import { Clientes } from '../screens/clientes';
+import { CadCliente } from '../screens/cadastroCliente';
 
 export function TabRoutes(){
     return(
@@ -18,19 +18,21 @@ export function TabRoutes(){
             }}
         >
             <Screen
-            name="screenA"
+            name="home"
             options={{
-                headerShown: false,
+                /* headerShown: false, */
+                title: 'Home',
                 tabBarLabel: 'Home',
+                headerTitleAlign: 'center',
                 tabBarIcon: ({ color, size }) => (
                     <FontAwesome5 name="home" size={size} color={color} />
                 )
             }}
-            component={ScreenA}
+            component={Home}
             />
 
             <Screen
-            name="screenB"
+            name="clientes"
             options={{
                 title: 'Clientes',
                 headerTitleAlign: 'center',
@@ -46,11 +48,11 @@ export function TabRoutes(){
                     />
                 )
             }}
-            component={ScreenB}
+            component={Clientes}
             />
 
             <Screen
-            name="screenC"
+            name="cadastroCliente"
             options={{
                 title: 'Cadastro de clientes',
                 headerTitleAlign: 'center',
@@ -59,7 +61,7 @@ export function TabRoutes(){
                     <MaterialIcons name="person-add-alt-1" size={30} color={color} />
                 )
             }}
-            component={ScreenC}
+            component={CadCliente}
             />
         </Navigator>
     )

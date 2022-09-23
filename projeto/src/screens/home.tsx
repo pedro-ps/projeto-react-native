@@ -3,15 +3,15 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CustomButton from '../components/CustomButton';
 
-export function ScreenA() {
+export function Home() {
     const navigation = useNavigation();
     
     function acessarClientes(){
-        navigation.navigate('screenB')
+        navigation.navigate('clientes')
     }
 
     function cadastrarClientes(){
-        navigation.navigate('screenC')
+        navigation.navigate('cadastroCliente')
     }
 
     function sair(){
@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
     txt:{
         fontSize: 35,
         fontWeight: 'bold',
-        marginTop: 50,
+        marginTop: 25,
         marginLeft: 25,
-        marginBottom: 300,
+        marginBottom: 280,
     }
 })
 

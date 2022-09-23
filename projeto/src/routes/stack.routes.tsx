@@ -5,15 +5,15 @@ import { Component } from 'react';
 const { Screen, Navigator } = createNativeStackNavigator();
 
 import { Home } from '../screens/home';
-import { ScreenB } from '../screens/screenB';
-import { ScreenC } from '../screens/screenC';
+import { Clientes } from '../screens/clientes';
+import { CadCliente } from '../screens/cadastroCliente';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export function StackRoutes(){
     return(
         <Navigator>
             <Screen
-            name="Home"
+            name="home"
             options={{
                 headerShown: false,
             }}
@@ -21,7 +21,7 @@ export function StackRoutes(){
             />
 
             <Screen
-            name="screenB"
+            name="clientes"
             options={{
                 title: 'Clientes',
                 headerTitleAlign: 'center',
@@ -30,20 +30,20 @@ export function StackRoutes(){
                 },
                 headerTintColor: '#fff'
             }}
-            component={ScreenB}
+            component={Clientes}
             />
 
             <Screen
-            name="screenC"
+            name="cadCliente"
             options={{
-                title: 'ScreenC',
+                title: 'CadCliente',
                 headerTitleAlign: 'center',
                 headerStyle: {
                     backgroundColor: 'black',
                 },
                 headerTintColor: '#fff'
             }}
-            component={ScreenC}
+            component={CadCliente}
             />
         </Navigator>
     )

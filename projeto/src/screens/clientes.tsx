@@ -3,16 +3,16 @@ import { StyleSheet, View, Button } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 
-export function ScreenB() {
+export function Clientes() {
     const navigation = useNavigation();
     
     function openScreen(){
-        navigation.navigate('screenC')
+        navigation.navigate('cadastroCliente')
     }
 
-    /* function click(){
+    function click(){
         alert('pressionou o botão!')
-    } */
+    }
 
     return (
         <View style={{flex: 1, backgroundColor: '#90e0ef'}}>
