@@ -4,6 +4,7 @@ export declare global {
             home: undefined;
             clientes: undefined;
             cadastroCliente: undefined;
+            sync: undefined;
         }
     }
 }

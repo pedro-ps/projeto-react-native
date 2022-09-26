@@ -15,7 +15,7 @@ export function Clientes() {
     }
 
     return (
-        <View style={{flex: 1, backgroundColor: '#90e0ef'}}>
+        <View style={styles.container}>
            <CustomButton
                 onClick={openScreen}
                 style={styles.Button}
@@ -26,6 +26,10 @@ export function Clientes() {
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flex: 1, 
+        backgroundColor: '#bbdbfe'
+    },
     Button:{
         width: '90%',
         height: 50,

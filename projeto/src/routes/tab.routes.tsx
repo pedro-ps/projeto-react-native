@@ -5,9 +5,10 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
-import { Home} from '../screens/home';
+import { Home } from '../screens/home';
 import { Clientes } from '../screens/clientes';
 import { CadCliente } from '../screens/cadastroCliente';
+import { Sync } from '../screens/sync'
 
 export function TabRoutes(){
     return(
@@ -17,10 +18,9 @@ export function TabRoutes(){
                 tabBarInactiveTintColor: 'gray',
             }}
         >
-            <Screen
+            {/* <Screen
             name="home"
             options={{
-                /* headerShown: false, */
                 title: 'Home',
                 tabBarLabel: 'Home',
                 headerTitleAlign: 'center',
@@ -29,7 +29,7 @@ export function TabRoutes(){
                 )
             }}
             component={Home}
-            />
+            /> */}
 
             <Screen
             name="clientes"
@@ -55,13 +55,28 @@ export function TabRoutes(){
             name="cadastroCliente"
             options={{
                 title: 'Cadastro de clientes',
-                headerTitleAlign: 'center',
+                headerTitleAlign: 'left',
                 tabBarLabel: 'Cadastro de clientes',
+                /* headerShown: false, */
                 tabBarIcon: ({ color }) => (
                     <MaterialIcons name="person-add-alt-1" size={30} color={color} />
                 )
             }}
             component={CadCliente}
+            />
+
+            <Screen
+            name="sync"
+            options={{
+                title: 'Sincronizar dados',
+                headerTitleAlign: 'left',
+                tabBarLabel: 'Sincronizar dados',
+                /* headerShown: false, */
+                tabBarIcon: ({ color }) => (
+                    <MaterialIcons name="sync" size={30} color={color} />
+                )
+            }}
+            component={Sync}
             />
         </Navigator>
     )

@@ -35,12 +35,12 @@ export function Home() {
                 title={'Cadastrar clientes'}
             />
 
-            <CustomButton 
+            {/* <CustomButton 
                 onClick={sair}
                 style={styles.Button}
                 titleStyle={styles.title}
                 title={'Sair'}
-            />
+            /> */}
         </View>
     )
 }
