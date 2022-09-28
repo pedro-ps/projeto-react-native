@@ -28,20 +28,21 @@ export function Clientes() {
 const styles = StyleSheet.create({
     container:{
         flex: 1, 
-        backgroundColor: '#bbdbfe'
+        backgroundColor: '#f0f4ff'
     },
     Button:{
-        width: '90%',
+        width: '95%',
         height: 50,
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#7cb518',
         marginTop: 10,
         alignSelf: 'center'
     },
     
     title:{
         fontSize: 20,
+        color: '#fff'
     }
 })
