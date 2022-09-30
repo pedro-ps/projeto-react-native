@@ -4,8 +4,8 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 export default function CustomButton ({title, onClick, style, titleStyle}){
     return (
         <TouchableOpacity 
-            style={style ? style : styles.container} 
-            onPress={onClick}>
+            onPress={onClick}
+            style={style ? style : styles.container}>
             <Text style={titleStyle ? titleStyle : styles.txt}>{title}</Text>
         </TouchableOpacity>
     )

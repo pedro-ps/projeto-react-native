@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, TouchableOpacity, TouchableHighlightBase } from
 import { MaterialIcons } from '@expo/vector-icons/';
 
 
-export default function RadioButtonT ({options = [], onChange, multiple = false}){
+export default function RadioBT ({options = [], onChange, multiple = false}){
     const [selected, setSelected] = useState([]);
-    function toggleT(id){
+    function toggleTT(id){
         let index = selected.findIndex((i)=> i === id);
         let arrSelecteds = [...selected]
         if(index !== -1){
@@ -30,9 +30,9 @@ export default function RadioButtonT ({options = [], onChange, multiple = false}
                     : '#fff'
                 }
                 ]} 
-                onPress={() => toggleT(op?.id)}>
+                onPress={() => toggleTT(op?.id)}>
                     {selected.findIndex(i => i === op.id) !== -1 ? (
-                    <MaterialIcons name="circle" color={'#3ebd93'} fontWeight={'bold'} size={15} />
+                    <MaterialIcons name="circle" color={'#3ebd93'} fontWeight={'bold'} size={12.4} />
                     ) : null}
                 </TouchableOpacity>    
                 <Text style={styles.optext}>{op?.text}</Text>
@@ -44,11 +44,11 @@ export default function RadioButtonT ({options = [], onChange, multiple = false}
 
 const styles = StyleSheet.create({
     container: {
-        marginLeft: 11,
+        marginLeft: 13,
         display: 'flex',
         flexDirection: 'row',
-        width: '50%',
-        justifyContent: 'space-between'
+        width: '40%',
+        justifyContent: 'space-between',
     },
     containerT: {
         marginLeft: 11,
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     touchable: {
-        height: 24.5,
-        width: 24.5,
+        height: 20.5,
+        width: 20.5,
         borderRadius: 50,
         backgroundColor: 'red',
         justifyContent: 'center',
@@ -70,12 +70,10 @@ const styles = StyleSheet.create({
         borderColor: '#3ebd93',
         borderWidth: 2,
         padding: 0,
-        marginTop: 10
     },
     optext: {
         marginLeft: 4,
         fontSize: 20,
         fontWeight: '600',
-        marginTop: 10
     }
 })

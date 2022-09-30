@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 import CustomButton from '../components/CustomButton';
-/* import { useNavigation } from '@react-navigation/native'; */
+import stylesSync from '../estilos/stylesSync';
 
 export function Sync() {
     function sincronizar(){
@@ -9,35 +9,13 @@ export function Sync() {
     }
 
     return (
-       <View style={styles.container}>
+       <View style={stylesSync.container}>
             <CustomButton 
-                style={styles.button}
-                titleStyle={styles.titleButton}
+                style={stylesSync.button}
+                titleStyle={stylesSync.titleButton}
                 title={'Sincronizar dados'} 
                 onClick={sincronizar}
         />
        </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container:{
-        backgroundColor: '#f0f4ff',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    button:{
-        backgroundColor: '#7cb518',
-        height: 50,
-        width: '95%',
-        borderRadius: 3,
-        marginTop: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    titleButton:{
-        fontSize: 20,
-        color: '#fff'
-    }
-})
